@@ -237,6 +237,7 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
     xhr.open("POST","https://usebasin.com/f/f25fbe63cc49",true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(jsonString);
+    alert("Game info has been submitted");
 
 
 
