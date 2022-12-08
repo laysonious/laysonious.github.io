@@ -204,11 +204,7 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
   );
     var jsonString= JSON.stringify(game);
     alert(jsonString);
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "http://127.0.0.1:2096/services/collector", true);
-    xhttp.setRequestHeader("Authorization", "5d73ac98-f4bd-4730-9402-c052efea4e7a");
-    xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhttp.send(JSON.stringify({"event": "THE STRING YOU WANT TO SEND"}));
+  
   }
   
   // Get the URL & Params, Break them Down
