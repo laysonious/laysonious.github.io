@@ -233,7 +233,8 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
     // (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));
 
    
-    alert(game);
+    var jsonString= JSON.stringify(game);
+    alert(jsonString);
 
 }
 
