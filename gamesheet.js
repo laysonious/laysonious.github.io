@@ -187,7 +187,7 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
   function submit() {
     var homeTeam = document.getElementsByClassName("homeTeam")[0].innerHTML;
     var visitorTeam = document.getElementsByClassName("visitorTeam")[0].innerHTML;
-    var tournamentID = document.getElementsByClassName("tournamentID")[0].innerHTML;
+    var tournamentID = new Date().getFullYear();
     var game = new Object();
     game["tournamentID"] = tournamentID;
     game["gameID"] = gameID;
@@ -253,13 +253,10 @@ var visitor_ENC = getUrlVars()["visitor"]
 
 // Decode the URI to Plaintext Chars
 var home = decodeURI(home_ENC);
-var visitor = decodeURI(visitor_ENC);
-    
-var tournamentID = new Date().getFullYear();
+var visitor = decodeURI(visitor_ENC
                     
 $(".homeTeam").text(home);
 $(".visitorTeam").text(visitor);
-$(".tournamentID").text(tournamentID);
 $(".homeTeamSub").text(home.split(" ").pop());
 $(".visitorTeamSub").text(visitor.split(" ").pop());
 
