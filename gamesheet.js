@@ -232,17 +232,8 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
     // game["gameID"] = ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
     // (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));
 
-    var sendToSplunk = new Object();
-    sendToSplunk["event"] = game;
-    //sendToSplunk["index"] = "recball-active";
-    sendToSplunk["index"] = "test";
-    var jsonString= JSON.stringify(sendToSplunk);
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "http://127.0.0.1:2096/services/collector", true);
-    xhttp.setRequestHeader("Authorization", "Splunk 5d73ac98-f4bd-4730-9402-c052efea4e7a");
-    xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhttp.send(jsonString);
-    alert("Game results have been submitted.  Please close the scoresheet now");
+   
+    alert(game);
 
 }
 
