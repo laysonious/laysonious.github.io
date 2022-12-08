@@ -238,7 +238,7 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(jsonString);
 
-  </script>
+
 
 }
 
