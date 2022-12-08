@@ -253,7 +253,7 @@ var visitor_ENC = getUrlVars()["visitor"]
 
 // Decode the URI to Plaintext Chars
 var home = decodeURI(home_ENC);
-var visitor = decodeURI(visitor_ENC
+var visitor = decodeURI(visitor_ENC);
                     
 $(".homeTeam").text(home);
 $(".visitorTeam").text(visitor);
