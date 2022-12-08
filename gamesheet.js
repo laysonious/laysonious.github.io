@@ -188,7 +188,6 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
     var homeTeam = document.getElementsByClassName("homeTeam")[0].innerHTML;
     var visitorTeam = document.getElementsByClassName("visitorTeam")[0].innerHTML;
     var tournamentID = document.getElementsByClassName("tournamentID")[0].innerHTML;
-    var gameID = document.getElementsByClassName("gameID")[0].innerHTML;
     var game = new Object();
     game["tournamentID"] = tournamentID;
     game["gameID"] = gameID;
@@ -229,8 +228,8 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
     game["freeSecondVisitor"] = myTable.rows[3].cells[2].innerHTML;
     game["freeThirdVisitor"] = myTable.rows[3].cells[3].innerHTML;
     game["freeFourthVisitor"] = myTable.rows[3].cells[4].innerHTML;
-    // game["gameID"] = ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
-    // (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));
+    game["gameID"] = ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));
 
    
     var jsonString= JSON.stringify(game);
@@ -251,19 +250,16 @@ function getUrlVars() {
 // Get just the event param
 var home_ENC = getUrlVars()["home"];
 var visitor_ENC = getUrlVars()["visitor"]
-var tournamentID_ENC = getUrlVars()["tournament"]
-var gameID_ENC = getUrlVars()["game"]
 
 // Decode the URI to Plaintext Chars
 var home = decodeURI(home_ENC);
 var visitor = decodeURI(visitor_ENC);
-var tournamentID = decodeURI(tournamentID_ENC);
-var gameID = decodeURI(gameID_ENC);
+    
+var tournamentID = new Date().getFullYear();
                     
 $(".homeTeam").text(home);
 $(".visitorTeam").text(visitor);
 $(".tournamentID").text(tournamentID);
-$(".gameID").text(gameID);
 $(".homeTeamSub").text(home.split(" ").pop());
 $(".visitorTeamSub").text(visitor.split(" ").pop());
 
