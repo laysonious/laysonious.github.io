@@ -190,7 +190,6 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
     var tournamentID = new Date().getFullYear();
     var game = new Object();
     game["tournamentID"] = tournamentID;
-    game["gameID"] = gameID;
     game["home"] = homeTeam;
     game["visitor"] = visitorTeam;
     var myTable = document.getElementById("foulTable");
