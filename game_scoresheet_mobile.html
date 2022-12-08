@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>RecBall ScoreSheet</title>
+  <script src="https://use.fontawesome.com/84cff6f9e7.js"></script>
+<link href="https://fonts.googleapis.com/css?
+family=Exo:700,800,900|Lato:100,300,400,700,900" rel="stylesheet"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'><link rel="stylesheet" href="/static/app/recball/gamesheet_mobile.css">
+
+
+
+</head>
+<body>
+<p hidden class="year">Initial</p>
+<div class="app-container">
+  <div class="p-container">
+    <!--Player 1 Start --> 
+    <div class="player-container">
+      <p>Home</p>
+      <h1 class="homeTeamSub">Initial</h1>
+      <div class="s-config-container">
+        <h2 class="score-display-main homeScore">0</h2>
+      </div>
+    </div>
+   <!--Player 1 Score End -->
+
+  <!--Round & Timer Start --> 
+    <div class="previous-container">
+      <div class="previous-quarter">
+				<button id="previous-quarter"><span class="fa fa-step-backward" aria-hidden="true"></span></button>
+	    </div>
+    </div>
+    <div class="quarter-container">
+      <h3>Quarter</h3>
+       <p id="quarter" class="quarter">1</p>
+       <div class="reset-player">
+					<button id="reset-btn"><i class="fa fa-refresh" aria-hidden="true"></i> Reset</button>
+		   </div>
+    </div>
+    <div class="previous-container">
+       <div class="next-quarter">
+				<button id="next-quarter"><span class="fa fa-step-forward" aria-hidden="true"></span></button>
+       </div>	
+    </div>
+
+   <!--Player 2 Start --> 
+    <div class="player-container">
+      <p>Visitor</p>
+      <H1 class="visitorTeamSub">Initial</H1>
+      <div class="s-config-container">
+        <h2 class="score-display-main visitorScore">0</h2>
+      </div>   
+    </div>
+  </div>
+<div class="table-container">
+  <h5 class="homeTeam">Team A</h5>
+  <table class="center"  id="teamAtable">
+  <tr>
+    <th></th>
+    <th>1st</th>
+    <th>2nd</th> 
+    <th>3rd</th>
+    <th>4th</th>
+    <th>Total</th>
+  </tr>
+  <tr>
+    <th>
+      <div class="fieldgoals teamA"> 
+        <button type="button" class="btn btn-default decrease fg teamA">
+					<span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span>
+         </button>2 Pts<p hidden class="score-display">0</p>
+        <button type="button" class="btn btn-default increase fg teamA">
+          <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+			  </button>
+     </div>
+    </th>
+    <td>0</td> 
+    <td>0</td>
+    <td>0</td> 
+    <td>0</td>
+    <td>0</td> 
+  </tr>
+  <tr>
+    <th>
+      <div class="threepointers teamA">
+        <button type="button" class="btn btn-default decrease tp teamA">
+			    <span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span>
+        </button>3 Pts<p hidden class="score-display">0</p>
+        <button type="button" class="btn btn-default increase tp teamA">
+				  <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+			  </button>
+      </div>
+    </th>
+    <td>0</td> 
+    <td>0</td>
+    <td>0</td> 
+    <td>0</td>
+    <td>0</td> 
+  </tr>
+  <tr>
+    <th>
+      <div class="freethrows teamA">
+        <button type="button" class="btn btn-default decrease ft teamA">
+				  <span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span>
+        </button>1 Pt<p hidden class="score-display">0</p>
+        <button type="button" class="btn btn-default increase ft teamA">
+				  <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+			  </button>
+      </div>
+    </th>
+    <td>0</td> 
+    <td>0</td>
+    <td>0</td> 
+    <td>0</td>
+    <td>0</td> 
+  </tr>
+  <tr>
+    <th class="totals">Total</th>
+    <td>0</td> 
+    <td>0</td>
+    <td>0</td> 
+    <td>0</td>
+    <td>0</td> 
+  </tr>
+    <tr class = "blank_row noBorder" </tr>
+  <tr>
+    <th>
+      <div class="fouls teamA">
+        <button type="button" class="btn btn-default decrease foul teamA">
+				  <span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span>
+        </button>Fouls<p hidden class="score-display">0</p>
+        <button type="button" class="btn btn-default increase foul teamA">
+				  <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+        </button>
+      </div></th>
+    <td>0</td> 
+    <td>0</td>
+    <td>0</td> 
+    <td>0</td>
+    <td>0</td> 
+  </tr>
+  </table><br/>
+  <h5 class="visitorTeam">Team B</h5>
+  <table class="center" id="teamBtable">
+  <tr>
+    <th></th>
+    <th>1st</th>
+    <th>2nd</th> 
+    <th>3rd</th>
+    <th>4th</th>
+    <th>Total</th>
+  </tr>
+  <tr>
+    <th>
+      <div class="fieldgoals teamB"> 
+        <button type="button" class="btn btn-default decrease fg teamB">
+			    <span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span>
+        </button>  2 Pts<p hidden class="score-display">0</p>
+        <button type="button" class="btn btn-default increase fg TeamB">
+			    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+			  </button>
+      </div>
+    </th>
+    <td>0</td> 
+    <td>0</td>
+    <td>0</td> 
+    <td>0</td>
+    <td>0</td> 
+  </tr>
+  <tr>
+    <th>
+      <div class="threepointers teamB">
+        <button type="button" class="btn btn-default decrease tp TeamB">
+				  <span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span>
+        </button>3 Pts<p hidden class="score-display">0</p>
+        <button type="button" class="btn btn-default increase tp TeamB">
+				  <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+			  </button>
+      </div>
+    </th>
+    <td>0</td> 
+    <td>0</td>
+    <td>0</td> 
+    <td>0</td>
+    <td>0</td> 
+  </tr>
+  <tr>
+    <th>
+      <div class="freethrows teamB">
+        <button type="button" class="btn btn-default decrease ft TeamB">
+				  <span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span>
+        </button>1 Pt<p hidden class="score-display">0</p>
+        <button type="button" class="btn btn-default increase ft TeamB">
+				  <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+			  </button>
+      </div>
+    </th>
+    <td>0</td> 
+    <td>0</td>
+    <td>0</td> 
+    <td>0</td>
+    <td>0</td> 
+  </tr>
+  <tr>
+    <th class="totals">Total</th>
+    <td>0</td> 
+    <td>0</td>
+    <td>0</td> 
+    <td>0</td>
+    <td>0</td> 
+  </tr>
+    <tr class="blank_row" "noBorder">
+    </tr>
+  <tr>
+    <th>
+      <div class="fouls teamB">
+        <button type="button" class="btn btn-default decrease foul TeamB">
+				  <span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span>
+        </button>
+        Fouls<p hidden class="score-display">0</p>
+        <button type="button" class="btn btn-default increase foul TeamB">
+			    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+        </button>
+      </div>
+    </th>
+    <td>0</td> 
+    <td>0</td>
+    <td>0</td> 
+    <td>0</td>
+    <td>0</td> 
+  </tr>
+  </table>
+
+<div class="row add">
+  <div class="col-xs-12">
+    <button id="submit"><i class="fas arrow-alt-circle-down" aria-hidden="true"></i> Submit Results</button>
+	</div>
+</div>
+
+  
+  </div>
+  </div>
+</div>
+
+
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+<script src="/static/js/i18n.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script><script  src="/static/app/recball/gamesheet_mobile.js"></script>
+
+</body>
+</html>
+
