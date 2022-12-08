@@ -1,15 +1,17 @@
 <html>
-  <select id="coffeedropdown" onchange="setPicture(this);">
-            <option value="images/gamblers.jpg">Select a Drink</option>
-            <option value="images/hippies.jpg">Caffe</option>
-            <option value="images/killerbees.jpg">Caffe Latte</option>
-            <option value="images/chiquita.jpg">Cappuccino</option>
+  <select id="teama" onchange="setPicture(this);">
+            <option value="images/gamblers.jpg">Select Home Team</option>
+            <option value="images/hippies.jpg">Harlem Hoop Hippies</option>
+            <option value="images/killerbees.jpg">Killer Bees</option>
+            <option value="images/chiquita.jpg">Chiquita Bananas</option>
 
   </select>
+  
+ <img id="team_a_imgid" width="200" height="200" src="images/nologo.jpg" id="team_a_image" />
+  
   <script type="text/javascript">
 
         function setPicture(select) {
-            selectedvalue=select.value;
-            alert(selectedvalue);
+            document.getElementById("team_a_imgid").src=select.value
         }
    </script>
