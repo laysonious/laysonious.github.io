@@ -4,6 +4,8 @@ $(document).ready(function() {
     $(".player-container").on("click", ".decrease", addScore);
     $(".player-container").on("click", ".increase-foul", addFoul);
     $(".player-container").on("click", ".decrease-foul", addFoul);
+    $(".player-container").on("click", ".increase-shootout", addShootOut);
+    $(".player-container").on("click", ".decrease-shootout", addShootOut);
     $(".player-container").on("click", ".next-quarter", nextQuarter);
     $(".player-container").on("click", ".previous-quarter", previousQuarter);
     $(document).on("click", "#reset-btn", reset);
@@ -95,7 +97,7 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
         myTable.rows[team].cells[currentQuarter].innerHTML = newVal
         myTable.rows[team].cells[5].innerHTML = parseFloat(myTable.rows[team].cells[1].innerHTML) + parseFloat(myTable.rows[team].cells[2].innerHTML) + parseFloat(myTable.rows[team].cells[3].innerHTML) + parseFloat(myTable.rows[team].cells[4].innerHTML)
     }
-    function addFoul(){
+    function addShootOut(){
         var currentQuarter = $(".quarter").text();
         if (currentQuarter != "Done") {
             alert("Game is still in progress, finish the quarters to score the shoot-out")
