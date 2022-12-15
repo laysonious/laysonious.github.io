@@ -118,6 +118,9 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
           newVal = 0
         }
         $(display).text(newVal);
+        
+     //   var myTable = document.getElementById(tableOpen)
+     //   myTable.rows[4].cells[5].innerHTML = parseFloat(myTable.rows[team].cells[1].innerHTML)
         //var myTable = document.getElementById("foulTable")
         //if (this.classList.contains("teamA")) {
         //  team = 1;
