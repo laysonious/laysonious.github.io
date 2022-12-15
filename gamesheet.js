@@ -111,7 +111,7 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
        var visitorScoreNum = $(visitorScore).find("h2");
        var visitorScoreValue = $(visitorScoreNum).text();
        
-       if (parseFloat(homeScoreValue) != parseFloat(visitorScoreValue) {
+       if (parseFloat(homeScoreValue) != parseFloat(visitorScoreValue)) {
            alert("Game is not tied, shoot-out is disabled")
            return
     }
