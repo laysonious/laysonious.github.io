@@ -127,12 +127,13 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
         var otherShootOut = document.getElementById(tableOpen);
         var otherShootOutNumber = $(display).find("h3");
         var otherShootOutValue = $(otherShootOutNumber).text();
-        if (otherShootOutValue > newVal) {
-            alert("Other Team")
-        }
-        if (newVal > otherShootOutValue) {
-            alert("This Team")
-        }
+        alert(otherShootOutValue);
+        //if (otherShootOutValue > newVal) {
+        //    alert("Other Team")
+        //}
+        //if (newVal > otherShootOutValue) {
+        //    alert("This Team")
+       // }
     
     
         
