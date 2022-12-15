@@ -97,6 +97,7 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
         myTable.rows[team].cells[currentQuarter].innerHTML = newVal
         myTable.rows[team].cells[5].innerHTML = parseFloat(myTable.rows[team].cells[1].innerHTML) + parseFloat(myTable.rows[team].cells[2].innerHTML) + parseFloat(myTable.rows[team].cells[3].innerHTML) + parseFloat(myTable.rows[team].cells[4].innerHTML)
     }
+    
     function addShootOut(){
         var currentQuarter = $(".quarter").text();
         if (currentQuarter != "Done") {
