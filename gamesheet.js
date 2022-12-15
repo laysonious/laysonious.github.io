@@ -125,7 +125,7 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
           tableOpen = "shootout teamA"
         }
         var otherShootOut = document.getElementById(tableOpen);
-        var otherShootOutNumber = $(display).find("h3");
+        var otherShootOutNumber = $(otherShootOut).find("h3");
         var otherShootOutValue = $(otherShootOutNumber).text();
         alert(otherShootOutValue);
         //if (otherShootOutValue > newVal) {
