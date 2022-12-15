@@ -242,10 +242,10 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
   function submit() {
     var homeTeam = document.getElementsByClassName("homeTeam")[0].innerHTML;
     var visitorTeam = document.getElementsByClassName("visitorTeam")[0].innerHTML;
-    var homeShootOut = document.getElementsByClassName("shootout TeamA");
+    var homeShootOut = document.getElementsByClassName("shootout teamA");
     var homeShootOutNum = $(homeShootOut).find("h3");
     var homeShootOutValue = $(homeShootOutNum).text();
-    var visitorShootOut = document.getElementsByClassName("shootout TeamB");
+    var visitorShootOut = document.getElementsByClassName("shootout teamB");
     var visitorShootOutNum = $(visitorShootOut).find("h3");
     var visitorShootOutValue = $(visitorShootOutNum).text();
     
