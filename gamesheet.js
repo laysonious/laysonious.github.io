@@ -130,7 +130,7 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
         if (otherShootOutValue > newVal) {
             alert("Other Team")
         }
-        if (newval > otherShootOutValue) {
+        if (newVal > otherShootOutValue) {
             alert("This Team")
         }
     
