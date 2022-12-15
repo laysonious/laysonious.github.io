@@ -117,22 +117,21 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
         if (newVal < 0) {
           newVal = 0
         }
-        $(display).text(newVal);
-        if (this.classList.contains("teamA")) {
-          tableOpen = "shootout teamB"
-        }
-        else {
-          tableOpen = "shootout teamA"
-        }
-        var otherShootOut = document.getElementsByClassName(tableOpen);
-        var otherShootOutNumber = $(otherShootOut).find("h3");
-        var otherShootOutValue = $(otherShootOutNumber).text();
-        alert(otherShootOutValue);
-        //if (otherShootOutValue > newVal) {
-        //    alert("Other Team")
+        //$(display).text(newVal);
+        //if (this.classList.contains("teamA")) {
+         // tableOpen = "shootout teamB"
         //}
-        //if (newVal > otherShootOutValue) {
-        //    alert("This Team")
+        //else {
+        //  tableOpen = "shootout teamA"
+       // }
+       // var otherShootOut = document.getElementsByClassName(tableOpen);
+       // var otherShootOutNumber = $(otherShootOut).find("h3");
+       // var otherShootOutValue = $(otherShootOutNumber).text();
+       // if (otherShootOutValue > newVal) {
+        //    alert("Other Team")
+      //  }
+       // if (newVal > otherShootOutValue) {
+         //   alert("This Team")
        // }
     
     
@@ -243,6 +242,13 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
   function submit() {
     var homeTeam = document.getElementsByClassName("homeTeam")[0].innerHTML;
     var visitorTeam = document.getElementsByClassName("visitorTeam")[0].innerHTML;
+    var homeShootOut = document.getElementsByClassName("shootout TeamA");
+    var homeShootOutNum = $(homeShootOut).find("h3");
+    var homeShootOutValue = $(homeShootOutNum).text();
+    var visitorShootOut = document.getElementsByClassName("shootout TeamB");
+    var visitorShootOutNum = $(visitorShootOut).find("h3");
+    var visitorShootOutValue = $(visitorShootOutNum).text();
+    
     var tournamentID = new Date().getFullYear();
     var game = new Object();
     game["tournamentID"] = tournamentID;
@@ -283,6 +289,8 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
     game["freeSecondVisitor"] = myTable.rows[3].cells[2].innerHTML;
     game["freeThirdVisitor"] = myTable.rows[3].cells[3].innerHTML;
     game["freeFourthVisitor"] = myTable.rows[3].cells[4].innerHTML;
+    game["shootOutHome"] = homeShootOutValue;
+    game["shootOutVisitor"] = visitorShootOutValue;
     game["gameID"] = ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
     (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));
 
