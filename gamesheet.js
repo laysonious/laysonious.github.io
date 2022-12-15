@@ -117,7 +117,7 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
         if (newVal < 0) {
           newVal = 0
         }
-        //$(display).text(newVal);
+        $(display).text(newVal);
         //if (this.classList.contains("teamA")) {
          // tableOpen = "shootout teamB"
         //}
