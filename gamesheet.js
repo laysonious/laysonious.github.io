@@ -95,6 +95,36 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
         myTable.rows[team].cells[currentQuarter].innerHTML = newVal
         myTable.rows[team].cells[5].innerHTML = parseFloat(myTable.rows[team].cells[1].innerHTML) + parseFloat(myTable.rows[team].cells[2].innerHTML) + parseFloat(myTable.rows[team].cells[3].innerHTML) + parseFloat(myTable.rows[team].cells[4].innerHTML)
     }
+    function addFoul(){
+        var currentQuarter = $(".quarter").text();
+        if (currentQuarter != "Done") {
+            alert("Game is still in progress, finish the quarters to score the shoot-out")
+            return
+       }
+       if (this.classList.contains("increase-shootout")) {
+          var modification = 1
+        }
+        else {
+          var modification = -1
+        }
+        var button = $(this);
+        var display = $(button).parents(".shootout").find("h3");
+        var oldVal = $(display).text();
+        var newVal = parseFloat(oldVal) + modification;
+        if (newVal < 0) {
+          newVal = 0
+        }
+        $(display).text(newVal);
+        //var myTable = document.getElementById("foulTable")
+        //if (this.classList.contains("teamA")) {
+        //  team = 1;
+        //}
+        //else {
+         // team = 2;
+        //}
+        //myTable.rows[team].cells[currentQuarter].innerHTML = newVal
+        //myTable.rows[team].cells[5].innerHTML = parseFloat(myTable.rows[team].cells[1].innerHTML) + parseFloat(myTable.rows[team].cells[2].innerHTML) + parseFloat(myTable.rows[team].cells[3].innerHTML) + parseFloat(myTable.rows[team].cells[4].innerHTML)
+    }
  
    
     function reset(){
