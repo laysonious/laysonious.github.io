@@ -104,6 +104,19 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
             alert("Game is still in progress, finish the quarters to score the shoot-out")
             return
        }
+       var homeScore = document.getElementsByClassName("player-container player-1-container");
+       var homeScoreNum = $(homeScore).find("h2");
+       var homeScoreValue = $(homeScoreNum).text();
+       var visitorScore = document.getElementsByClassName("player-container player-2-container");
+       var visitorScoreNum = $(visitorScore).find("h2");
+       var visitorScoreValue = $(visitorScoreNum).text();
+       
+       if (parseFloat(homeScoreValue) != parseFloat(visitorScoreValue) {
+           alert("Game is not tied, shoot-out is disabled")
+           return
+    }
+        
+        
        if (this.classList.contains("increase-shootout")) {
           var modification = 1
         }
