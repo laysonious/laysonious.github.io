@@ -118,6 +118,24 @@ parseFloat(myTable.rows[3].cells[currentQuarter].innerHTML)
           newVal = 0
         }
         $(display).text(newVal);
+        if (this.classList.contains("teamA")) {
+          tableOpen = "shootout teamB"
+        }
+        else {
+          tableOpen = "shootout teamA"
+        }
+        var otherShootOut = document.getElementById(tableOpen);
+        var otherShootOutNumber = $(display).find("h3");
+        var otherShootOutValue = $(otherShootOutNumber).text();
+        if (otherShootOutValue > newvVal {
+            alert("Other Team")
+        }
+        if (newval > otherShootOutValue) {
+            alert("This Team")
+        }
+    
+        
+        
         
      //   var myTable = document.getElementById(tableOpen)
      //   myTable.rows[4].cells[5].innerHTML = parseFloat(myTable.rows[team].cells[1].innerHTML)
